@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "avaliacao"
+version = "0.1.0"
+description = ""
+authors = ["Cassius <cassiustcmendes@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.0.1"
+flask-mongoengine = "^1.0.0"
+Flask-Cors = "^3.0.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pylint = "^2.9.6"
+flake8 = "^3.9.2"
+black = "^21.7b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
