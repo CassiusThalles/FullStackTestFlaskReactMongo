@@ -7,8 +7,9 @@ authors = ["Cassius <cassiustcmendes@hotmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 Flask = "^2.0.1"
-flask-mongoengine = "^1.0.0"
 Flask-Cors = "^3.0.10"
+python-dotenv = "^0.19.0"
+flask-mongoengine = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"

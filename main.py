@@ -1,9 +1,14 @@
-from flask import Flask
-
-app = Flask(__name__)
+"""
+This is the main module of the API
+"""
+from routes import routes
+from config import app
 
 @app.route('/')
 def helloworld():
+    """
+    This is a test endpoint to verify if the basic structure of the app is running correctly
+    """
     return 'Hello, World!'
 
 if __name__ == '__main__':

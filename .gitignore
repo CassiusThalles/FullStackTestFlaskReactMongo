@@ -1,3 +1,4 @@
 teste/
 __pycache__/
 .dbdata/
+.env
