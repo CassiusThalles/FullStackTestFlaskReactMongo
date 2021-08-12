@@ -1,4 +1,4 @@
-from config.db import db, app
+from config.config import db, app
 from flask import request
 from endpoints.news import list_all_news, create_news, update_news, destroy_news, list_news
 

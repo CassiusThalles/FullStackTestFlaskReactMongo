@@ -1,3 +1,4 @@
+from werkzeug.wrappers import response
 from models.news import News as modelNews
 from flask import request, jsonify
 import json, datetime
@@ -5,7 +6,9 @@ import json, datetime
 def list_all_news():
     news = modelNews.objects().to_json()
     news = json.loads(news)
-    return jsonify(news), 200
+    response = jsonify(news)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response, 200
 
 def create_news(data):
     req = json.loads(data)

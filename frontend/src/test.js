@@ -7,11 +7,11 @@ export default class Teste extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
-            .then(res => {
-                const news = res.data;
-                this.setState({ news });
-            })
+        axios('http://localhost:8000/news')
+        .then(response => {
+            const result = response.data;
+            this.setState({news: result});
+        })
     }
 
     render() {

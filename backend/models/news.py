@@ -1,7 +1,7 @@
 """
 This is responsible to create the News data Model
 """
-from config.db import db, app
+from config.config import db, app
 
 class News(db.Document):
     """
