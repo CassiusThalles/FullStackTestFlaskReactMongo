@@ -12,5 +12,5 @@ class News(db.Document):
     """
     title = db.StringField(max_length=200, required=True)
     content = db.StringField()
-    publish = db.DateTimeField(required=True)
+    publish = db.StringField(required=True)
     
