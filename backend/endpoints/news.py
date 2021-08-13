@@ -13,7 +13,6 @@ def list_all_news():
 def create_news(data):
     req = json.loads(data)
     req['publish'] = datetime.datetime.now().strftime('%H:%M:%S %d/%m/%Y')
-    try:
         news = modelNews(**req).save()
     except Exception as exc:
         return jsonify({'exception': str(exc)}), 400
