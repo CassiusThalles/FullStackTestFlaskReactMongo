@@ -14,6 +14,7 @@ db = MongoEngine()
 
 CORS(app)
 
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 app.config['MONGODB_SETTINGS'] = {
     'db': os.environ.get('MONGODB_DATABASE'),

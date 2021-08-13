@@ -33,11 +33,11 @@ def update_news(id, data):
         model_news.update(**req)
     except Exception as exc:
         return jsonify({'exception': str(exc)}), 400
-    return jsonify({'status': 'Usuário atualizado com sucesso'}), 200
+    return jsonify({'status': 'Notícia atualizada com sucesso'}), 200
 
 def destroy_news(id):
     try:
         modelNews.objects(id=id).delete()
     except Exception as exc:
         return jsonify({'exception': str(exc)}), 400
-    return jsonify({'status': 'Usuário deletado com sucesso'}), 204
+    return jsonify({'status': 'Notícia deletada com sucesso'}), 204
