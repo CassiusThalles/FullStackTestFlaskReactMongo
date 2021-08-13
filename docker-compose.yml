@@ -1,0 +1,27 @@
+version: '3.8'
+services: 
+  api:
+    build: 
+      context: backend/
+      dockerfile: Dockerfile
+    container_name: flask_api
+    ports: 
+      - 8000:8000
+    environment: 
+        MONGODB_DATABASE: avaliacao
+        MONGODB_URI: mongodb://db:27017
+    depends_on: 
+      - db
+    networks: 
+      - backend
+  db:
+    image: mongo:latest
+    container_name: appDatabase
+    restart: unless-stopped
+    ports: 
+      - 27018:27017
+    networks: 
+      - backend
+networks: 
+  backend:
+    driver: bridge

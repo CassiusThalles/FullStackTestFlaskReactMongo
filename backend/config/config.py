@@ -20,7 +20,9 @@ app.config['MONGODB_SETTINGS'] = {
     'db': os.environ.get('MONGODB_DATABASE'),
     'host': os.environ.get('MONGODB_URI'),
     # 'host': os.environ.get('MONGODB_HOST'),
-    # 'port': int(os.environ.get('MONGODB_PORT'))
+    # 'port': int(os.environ.get('MONGODB_PORT')),
+    # 'username': os.environ.get('MONGODB_USERNAME'),
+    # 'password': os.environ.get('MONGODB_PASSWORD'),
 }
 
 db.init_app(app)
