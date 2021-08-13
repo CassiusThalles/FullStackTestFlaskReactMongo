@@ -1,0 +1,13 @@
+.NavigationBar {
+    margin: 0;
+    background-color: rgb(113, 212, 230);
+}
+
+.NavigationLinksList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+    padding-top: 2%;
+}
